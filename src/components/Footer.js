@@ -3,5 +3,9 @@ import '../styles/style.css';
 import '../styles/Footer.css';
 
 export default function Footer(props) {
-  return <div><h2>Footer</h2></div>
+  return (
+    <div className='footer'>
+      <h2>Footer</h2>
+    </div>
+  )
 };
