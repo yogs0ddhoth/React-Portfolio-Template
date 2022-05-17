@@ -1,0 +1,16 @@
+.navDiv {
+  margin-left: auto;
+  align-self: center;
+}
+
+.navbar > ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+li {
+  text-decoration: none;
+  padding: .5rem;
+}
