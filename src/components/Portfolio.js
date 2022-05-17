@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/style.css';
+import '../css/style.css';
 import Project from './Project';
 
 export default function Contact(props) {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, Routes, Route } from 'react-router-dom';
-import '../styles/style.css';
-import '../styles/Navigation.css';
+import '../css/style.css';
+import '../css/Navigation.css';
 
 export default function Navigation(props) {
   return (

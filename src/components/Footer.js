@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../styles/style.css';
-import '../styles/Footer.css';
+import '../css/style.css';
+import '../css/Footer.css';
 
 export default function Footer(props) {
   return (

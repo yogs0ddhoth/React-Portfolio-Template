@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../styles/style.css';
-import '../styles/Header.css';
+import '../css/style.css';
+import '../css/Header.css';
 
 import Navigation from './Navigation';
 
