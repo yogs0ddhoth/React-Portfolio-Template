@@ -1,0 +1,9 @@
+.project:first-child {
+  width: 100%;
+}
+.project:not(:first-child) {
+  width: 36%;
+}
+img {
+  max-width: 100%;
+}
