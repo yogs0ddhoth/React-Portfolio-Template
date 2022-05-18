@@ -1,0 +1,19 @@
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.portfolio > h2 {
+  align-self: flex-start;
+  padding-left: 2rem;
+}
+
+.projects {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem;
+}
