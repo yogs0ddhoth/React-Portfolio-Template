@@ -14,14 +14,16 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className="App">
-      <Header />
+      <div className='contentWrap'>
+        <Header />
 
-      <Routes>
-        <Route path='about' element={<About />} />
-        <Route path='portfolio' element={<Portfolio />} />
-        <Route path='contact' element={<Contact />} />
-        <Route path='resume' element={<Resume />} />
-      </Routes>
+        <Routes>
+          <Route path='about' element={<About />} />
+          <Route path='portfolio' element={<Portfolio />} />
+          <Route path='contact' element={<Contact />} />
+          <Route path='resume' element={<Resume />} />
+        </Routes>
+      </div>
       
       <Footer />
     </div>
