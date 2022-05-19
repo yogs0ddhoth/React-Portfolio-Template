@@ -1,12 +1,3 @@
-.project:first-child {
-  width: 100%;
-}
-.project:first-child img {
-  width: 85%;
-}
-.project:not(:first-child) {
-  width: 36%;
-}
 img {
   max-width: 100%;
 }
