@@ -1,0 +1,11 @@
+import React, { useState } from 'react';
+import '../../css/style.css';
+
+export default function Resume() {
+  return (
+    <div>
+      <h2 className='title'>Resume</h2>
+      <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+    </div>
+  )
+};
