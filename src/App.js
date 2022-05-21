@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, Routes, Route } from 'react-router-dom';
 
 import logo from './logo.svg';
+// import './css/reset.css';
 import './css/App.css';
 
 import Header from './components/Header';
@@ -18,10 +19,10 @@ function App() {
         <Header />
 
         <Routes>
-          <Route path='about' element={<About />} />
-          <Route path='portfolio' element={<Portfolio />} />
-          <Route path='contact' element={<Contact />} />
-          <Route path='resume' element={<Resume />} />
+          <Route path='react-portfolio-template/' element={<About />} />
+          <Route path='react-portfolio-template/portfolio' element={<Portfolio />} />
+          <Route path='react-portfolio-template/contact' element={<Contact />} />
+          <Route path='react-portfolio-template/resume' element={<Resume />} />
         </Routes>
       </div>
       
