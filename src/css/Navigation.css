@@ -1,17 +1,15 @@
-.navDiv {
-  margin-left: auto;
-  align-self: center;
-}
-
-.navbar > ul {
+ul {
   list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  padding-right: 1rem;
+  padding: 0;
 }
 
 li {
   text-decoration: none;
   padding: .5rem;
+}
+
+@media screen and (min-width: 768px) {
+  ul {
+    padding-right: 1rem;
+  }
 }
