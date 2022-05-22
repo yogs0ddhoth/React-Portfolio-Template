@@ -1,9 +1,12 @@
 .header {
-  width: 100%;
   min-height: 5rem;
 }
 
+.home:hover {
+  text-decoration: none;
+}
 h1 {
+  color: black;
   text-align: center;
   font-size: 3.5rem;
 }

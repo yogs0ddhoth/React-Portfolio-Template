@@ -1,5 +1,6 @@
 .footer {
   width:100%;
+  min-height: 3rem;
   position: absolute;
   bottom: 0;
   display: flex;
@@ -9,4 +10,8 @@
 
 div.footer > * {
   align-items: center;
+}
+
+.icon {
+  line-height: 3rem;
 }
