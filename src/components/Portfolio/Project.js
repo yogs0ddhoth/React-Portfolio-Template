@@ -6,15 +6,15 @@ import underConstruction from '../../images/under-construction.jpg';
 
 export default function Project(props) {
   return (
-    <figure className='project row col-12 col-md-6'>
-      <a href=''>
+    <div className='project col-12 col-md-6'>
+      <a href='' className=''>
         <img src={underConstruction} alt='image is nested in a link to the deployed app' />
       </a>
-      <figcaption>
+      <div>
         <h3>Project Title</h3>
         <p>Description</p>
         <a href=''>Link to Repo</a>
-      </figcaption>
-    </figure>
+      </div>
+    </div>
   )
 };
