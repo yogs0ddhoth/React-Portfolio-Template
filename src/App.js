@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import logo from './logo.svg';
 // import './css/reset.css';
@@ -19,10 +19,10 @@ function App() {
         <Header />
 
         <Routes>
-          <Route path='react-portfolio-template/' element={<About />} />
-          <Route path='react-portfolio-template/portfolio' element={<Portfolio />} />
-          <Route path='react-portfolio-template/contact' element={<Contact />} />
-          <Route path='react-portfolio-template/resume' element={<Resume />} />
+          <Route path='/' element={<About />} />
+          <Route path='/portfolio' element={<Portfolio />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/resume' element={<Resume />} />
         </Routes>
       </div>
       
