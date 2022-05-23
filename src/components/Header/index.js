@@ -9,7 +9,7 @@ export default function Header(props) {
   return (
     <div>
       <header className='header col-12 flex-row align-end pt-3'>
-        <NavLink to='/' className='home col-12 col-md-6'>
+        <NavLink to='React-Portfolio-Template/' className='home col-12 col-md-6'>
           <h1 className=''>Header</h1>
         </NavLink>
         <Navigation />

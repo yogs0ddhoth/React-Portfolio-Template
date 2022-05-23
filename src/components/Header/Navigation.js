@@ -9,22 +9,22 @@ export default function Navigation(props) {
     <nav className='col-12 col-md-auto row align-end'>
       <ul className='flex-row'>
         <li>
-          <NavLink to='/' className={''}>
+          <NavLink to='React-Portfolio-Template/' className={''}>
             About
           </NavLink>
         </li>
         <li>
-          <NavLink to='/portfolio' className={''}>
+          <NavLink to='React-Portfolio-Template/portfolio' className={''}>
             Portfolio
           </NavLink>
         </li>
         <li>
-          <NavLink to='/contact' className={''}>
+          <NavLink to='React-Portfolio-Template/contact' className={''}>
             Contact
           </NavLink>
         </li>
         <li>
-          <NavLink to='/resume' className={''}>
+          <NavLink to='React-Portfolio-Template/resume' className={''}>
             Resume
           </NavLink>
         </li>
