@@ -5,13 +5,13 @@ import '../../css/style.css';
 
 export default function Contact(props) {
   const [name, setName] = useState('');
-  const [nameErr, setNameErr] = useState('');
-
   const [email, setEmail] = useState('');
-  const [emailErr, setEmailErr] = useState('');
+  const [message, setMessage] = useState('');
+  
   const [emailValid, setEmailValid] = useState('');
 
-  const [message, setMessage] = useState('');
+  const [nameErr, setNameErr] = useState('');
+  const [emailErr, setEmailErr] = useState('');
   const [messageErr, setMessageErr] = useState('');
   
   const [selected, setSelected] = useState('')
@@ -42,8 +42,7 @@ export default function Contact(props) {
         break;
       case 'email':
         setEmail(value);
-        // 'validate' email format
-        (/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/.test(email) === false) ? setEmailValid(false) : setEmailValid(true);
+        setEmailValid(/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/.test(email) ? true : false);
         break;
       case 'message':
         setMessage(value);
@@ -53,23 +52,26 @@ export default function Contact(props) {
   const handleFormSubmit = (event) => {
     event.preventDefault();
     
-    name === '' ? setNameErr(true) : setNameErr(null);
-    
-    if (email === '') {
-      setEmailErr(true);
-      setEmailValid(false);
-    } else {
-      setEmailErr(null);
-    }
-    message === '' ? setMessageErr(true) : setMessageErr(null);
+    setNameErr(name === '' ? true : null);
+    setEmailErr(email === '' ? true : null);
+    setMessageErr(message === '' ? true : null);
 
-    if (!([nameErr, emailErr, messageErr].includes(true))) {
-      // clear the fields <- convert to server interaction later
-      setName('');
-      setEmail('');
-      setMessage('');
+    setName(!([nameErr, emailErr, messageErr].includes(true)) ? '' : name);
+    setEmail(!([nameErr, emailErr, messageErr].includes(true)) ? '' : email);
+    setMessage(!([nameErr, emailErr, messageErr].includes(true)) ? '' : message);
+  };
+
+  const errStatus = (state, stateErr, selectedState, htmlId) => {
+    if (stateErr === true || (stateErr === false && selectedState !== htmlId && state === '')) {
+      return <span>* This field is required.</span>
     }
   };
+
+  const emailStatus = () => {
+    if (emailErr === true || emailValid === false || (emailErr === false && selected !== 'email' && emailValid === false)) {
+      return <span>Enter a valid email address.</span>
+    }
+  }
 
   return (
     <div className='col-12 flex-row justify-center ' onClick={handleClick}>
@@ -81,8 +83,7 @@ export default function Contact(props) {
         <div className='col-12 flex-row justify-center'>
 
           <label className='col-10 pb-1' htmlFor='name'>
-            Name:
-              <span>{nameErr === true || nameErr === false && selected !== 'name' && name === '' ? ' * This field is required.' : ''}</span>
+            Name: {errStatus(name, nameErr, selected, 'name')}
           </label>
           <input className='col-10' type='text' id='name' value={name} onChange={handleChange} />
         </div>
@@ -90,9 +91,7 @@ export default function Contact(props) {
         <div className='col-12 flex-row justify-center'>
 
           <label className='col-10 pb-1' htmlFor='email'>
-            Email Address: 
-              <span>{emailErr === true || emailErr === false && selected !== 'email' && email === '' ? ' * This field is required.' : ''}</span>
-              <span>{emailValid === false || emailErr === false && selected !== 'email' && emailValid === false ? ' Enter a valid email address.' : ''}</span>
+            Email Address: {errStatus(email, emailErr, selected, 'email')} {emailStatus()}
           </label>
           <input className='col-10' type='text' id='email' value={email} onChange={handleChange} />
         </div>
@@ -100,8 +99,7 @@ export default function Contact(props) {
         <div className='col-12 flex-row justify-center'>
 
           <label className='col-10 pb-1' htmlFor='message'>
-            Message: 
-              <span>{messageErr === true || messageErr === false && selected !== 'message' && message === '' ? ' * This field is required.' : ''}</span>
+            Message: {errStatus(message, messageErr, selected, 'message')}
           </label>
           <textarea className='col-10' type='text' id='message' value={message} onChange={handleChange} />
         </div>
