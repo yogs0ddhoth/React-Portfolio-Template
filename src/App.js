@@ -19,10 +19,10 @@ function App() {
         <Header />
 
         <Routes>
-          <Route path='React-Portfolio-Template/' element={<About />} />
-          <Route path='React-Portfolio-Template/portfolio' element={<Portfolio />} />
-          <Route path='React-Portfolio-Template/contact' element={<Contact />} />
-          <Route path='React-Portfolio-Template/resume' element={<Resume />} />
+          <Route path='/' element={<About />} />
+          <Route path='/portfolio' element={<Portfolio />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/resume' element={<Resume />} />
         </Routes>
       </div>
       
