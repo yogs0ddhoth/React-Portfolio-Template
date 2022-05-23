@@ -54,8 +54,14 @@ export default function Contact(props) {
     event.preventDefault();
     
     name === '' ? setNameErr(true) : setNameErr(null);
-    email === '' ? setEmailErr(true) : setEmailErr(null);
-    message === '' ? setMessageErr(true) : setEmailErr(null);
+    
+    if (email === '') {
+      setEmailErr(true);
+      setEmailValid(false);
+    } else {
+      setEmailErr(null);
+    }
+    message === '' ? setMessageErr(true) : setMessageErr(null);
 
     if (!([nameErr, emailErr, messageErr].includes(true))) {
       // clear the fields <- convert to server interaction later
