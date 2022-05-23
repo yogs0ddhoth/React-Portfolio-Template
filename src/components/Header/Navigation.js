@@ -14,17 +14,17 @@ export default function Navigation(props) {
           </NavLink>
         </li>
         <li>
-          <NavLink to='/React-Portfolio-Template/portfolio' className={''}>
+          <NavLink to='React-Portfolio-Template/portfolio' className={''}>
             Portfolio
           </NavLink>
         </li>
         <li>
-          <NavLink to='/React-Portfolio-Template/contact' className={''}>
+          <NavLink to='React-Portfolio-Template/contact' className={''}>
             Contact
           </NavLink>
         </li>
         <li>
-          <NavLink to='/React-Portfolio-Template/resume' className={''}>
+          <NavLink to='React-Portfolio-Template/resume' className={''}>
             Resume
           </NavLink>
         </li>
