@@ -13,9 +13,9 @@ import Resume from './pages/Resume';
 import Footer from './components/Footer';
 
 function App() {
-  
+
   return (
-    <div className="App">
+    <div className="App theme-1">
       <div className='contentWrap'>
         <Header />
 

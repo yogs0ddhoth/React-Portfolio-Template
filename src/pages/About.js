@@ -4,13 +4,13 @@ import '../css/style.css';
 
 export default function About(props) {
   const imgStyle = { borderRadius: '50%' };
-  
+
   return (
-    <div className='col-12 flex-row'>
-      <h2 className='title col-12 align-start'>About Me</h2>
+    <div className='theme-1 col-12 flex-row'>
+      <h2 className='theme-1 title col-12 align-start'>About Me</h2>
       {/*Todo: add generic avatar image - favicon?*/}
-      <img src={avatar} alt='Avatar' className='col-3 col-2-md col-1-lg' style={imgStyle}/>
-      <p className='col-12'>Lorem ipsum dolor sit amet</p>
+      <img src={avatar} alt='Avatar' className='theme-1 col-3 col-2-md col-1-lg' style={imgStyle}/>
+      <p className='theme-1 col-12'>Lorem ipsum dolor sit amet</p>
     </div>
   )
 };

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../css/style.css';
+import '../css/style.css';
 
 // import ContactForm from './contactForm';
 
@@ -50,7 +50,7 @@ export default function Contact() {
       message: formState.message === '' ? true : null 
     });
     if ( !([ formErr.name, formErr.email, formErr.message ].includes(true)) ) {
-      setFormState(form);
+      setFormState({ name: '', email: '', message: '' });
     };
   };
 

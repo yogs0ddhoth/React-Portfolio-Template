@@ -8,9 +8,9 @@ import Navigation from './Navigation';
 export default function Header(props) {
   return (
     <div>
-      <header className='header col-12 flex-row align-end pt-3'>
+      <header className='header theme-3 col-12 flex-row align-end pt-3'>
         <NavLink to='/' className='home col-12 col-md-6'>
-          <h1 className=''>Header</h1>
+          <h1 className='theme-3'>Header</h1>
         </NavLink>
         <Navigation />
       </header>
